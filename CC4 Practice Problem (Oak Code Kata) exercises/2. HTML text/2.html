@@ -1,0 +1,31 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<script>
+    function func() {
+        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].forEach((elem, i) => document.getElementById("display" + i).innerHTML = elem)
+    }
+</script>
+
+<body>
+    Create a webpage that prints the numbers 1 - 10 to the screen.<br/>
+    <button onclick="func()">x</button>
+    <p id="display0" style="color: red"></p>
+    <p id="display1" style="color: blue"></p>
+    <p id="display2" style="color: green"></p>
+    <p id="display3" style="color: red"></p>
+    <p id="display4" style="color: blue"></p>
+    <p id="display5" style="color: green"></p>
+    <p id="display6" style="color: red"></p>
+    <p id="display7" style="color: blue"></p>
+    <p id="display8" style="color: green"></p>
+    <p id="display9" style="color: red"></p>
+</body>
+
+</html>
