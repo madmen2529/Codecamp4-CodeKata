@@ -1,0 +1,26 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<script>
+    function func() {
+        [1, 2, 3, 4].forEach((elem, i) => document.getElementById("display" + i).innerHTML = "Sample Text")
+    }
+</script>
+
+<body>
+    Print a paragraph with 4 - 5 sentences. Each sentence should be a different font.
+    <br/>
+    <button onclick="func()">x</button>
+    <p id="display0" style="font-family: Tahoma"></p>
+    <p id="display1" style="font-family: sans-serif"></p>
+    <p id="display2" style="font-family:'Trebuchet MS'"></p>
+    <p id="display3" style="font-family: Lucida Sans Unicode"></p>
+</body>
+
+</html>
