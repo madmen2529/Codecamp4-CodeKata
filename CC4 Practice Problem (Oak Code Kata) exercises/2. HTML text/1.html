@@ -9,21 +9,15 @@
 
 <script>
     function func() {
-
-        let html = '';
-        [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20].forEach((item, idx) => {
-            html += `${item}<sup>2</sup> = ${Math.pow(item, 2)}<br/>`
-        });
-
-        document.getElementById("display").innerHTML = html;
+        document.getElementById("display").innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum officia veritatis doloremque pariatur fugiat numquam dolore corporis distinctio totam voluptatum in, exercitationem iusto maiores rem neque minima accusantium ipsa nihil!"
     }
 </script>
 
 <body>
-    Print the squares of the numbers 1 - 20. Each number should be on a separate line, next to it the number 2 superscripted, an equal sign and the result. (Example: 102 = 100) [See solution]
+    Create a webpage that prints any text of your choosing to the screen, but this time include a head section in the code.
     <br/>
     <button onclick="func()">x</button>
-    <p id="display"></p>
+    <p id="display" style="color: green;"></p>
 </body>
 
 </html>
