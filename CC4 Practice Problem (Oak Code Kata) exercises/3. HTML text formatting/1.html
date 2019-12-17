@@ -1,0 +1,26 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<script>
+    function func() {
+        let html = '';
+        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].forEach((num, idx) => {
+            html += `${num}<sup>2</sup> = ${Math.pow(num, 2)}<br/>`
+        });
+        document.getElementById("display").innerHTML = html;
+    }
+</script>
+
+<body onload="func()">
+    Print the squares of the numbers 1 - 20. Each number should be on a separate line, next to it the number 2 superscripted, an equal sign and the result. (Example: 102 = 100) [See solution]
+    <br/>
+    <p id="display"></p>
+</body>
+
+</html>
