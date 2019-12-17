@@ -1,0 +1,34 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function func(params) {
+            let html = '';
+
+            var arr = [];
+            for (let i = 0; i < 50; i++) arr[i] = i + 1;
+            console.log(arr);
+
+
+            arr.forEach((item, idx) => {
+                html += `xxx<br/><br/>`
+            });
+
+            document.getElementById('display').innerHTML = html;
+        }
+    </script>
+</head>
+
+<body onload="func()">
+    Create a page with a link at the bottom of it that when clicked will jump all the way to the top of the page. [See solution]
+    <br/>
+    <a name="topofpage">Top</a>
+    <p id="display"></p>
+    <a href="#topofpage">Click here!</a>
+</body>
+
+</html>

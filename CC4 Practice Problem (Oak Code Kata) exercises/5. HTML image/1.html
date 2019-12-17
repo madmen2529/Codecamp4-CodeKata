@@ -1,0 +1,29 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function func(params) {
+            let html = '';
+
+            ['picsum', 'picsum', 'picsum', 'picsum', 'picsum'].forEach((item, idx) => {
+                html += `<img title="${item}" 
+                src="https://picsum.photos/id/${parseInt(idx*5*idx)}/200/300" 
+                alt="Apple"/><br/><br/>`
+            });
+
+            document.getElementById('display').innerHTML = html;
+        }
+    </script>
+</head>
+
+<body onload="func()">
+    Display five different images. Skip two lines between each image. Each image should have a title. [See solution]
+    <br/>
+    <p id="display"></p>
+</body>
+
+</html>

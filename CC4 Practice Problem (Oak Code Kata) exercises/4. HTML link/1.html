@@ -1,0 +1,30 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function func(params) {
+            let html = '';
+
+            ['http://www.google.com', 'http://www.yahoo.com', 'http://www.bing.com', 'http://www.altavista.com', 'http://www.lycos.com'].forEach((item, idx) => {
+                html += `<a href="${item}">
+                    ${item}
+                </a>
+                <br/><br/>`
+            });
+
+            document.getElementById('display').innerHTML = html;
+        }
+    </script>
+</head>
+
+<body onload="func()">
+    Create some links to various search engines (google, yahoo, altavista, lycos, etc). [See solution]
+    <br/>
+    <p id="display"></p>
+</body>
+
+</html>

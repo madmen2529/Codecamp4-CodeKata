@@ -1,0 +1,28 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function func(params) {
+            let html = '';
+
+            ['x', 'y', 'z', 'a', 'b', 'c', 'd'].forEach((item) => {
+                html += `<abbr title="${item}">${item}</abbr><br/>`
+            });
+
+            document.getElementById('display').innerHTML = html;
+        }
+    </script>
+</head>
+
+<body onload="func()">
+    Print ten acronyms and abbreviations of your choosing, each separated by two lines. Specify the data that the abbreviations and acronyms represent. [See solution]
+
+    <br/>
+    <p id="display"></p>
+</body>
+
+</html>

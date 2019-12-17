@@ -1,0 +1,31 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function func(params) {
+            let html = '';
+
+            ['picsum'].forEach((item, idx) => {
+                html += `<a href="images/sample.jpg">
+                <img title="${item}"
+                src="images/sample.jpg" 
+                alt="xxx"/></a><br/><br/>`
+            });
+
+            document.getElementById('display').innerHTML = html;
+        }
+    </script>
+</head>
+
+<body onload="func()">
+    Display an image that when clicked will link to itself and will display the image in the browser by itself. [See solution]
+    <br>
+
+    <p id="display"></p>
+</body>
+
+</html>
