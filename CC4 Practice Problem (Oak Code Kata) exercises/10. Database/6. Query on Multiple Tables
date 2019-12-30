@@ -1,0 +1,50 @@
+//https://www.w3resource.com/sql-exercises/sql-exercises-quering-on-multiple-table.php
+
+//1
+SELECT c.cust_name, s.name, s.city
+FROM salesman s, customer c
+WHERE s.city = c.city
+
+//2
+SELECT c.cust_name, s.name
+FROM customer c, salesman s
+WHERE s.salesman_id = c.salesman_id
+
+//3
+SELECT o.ord_no, c.cust_name, o.customer_id, o.salesman_id
+FROM salesman s, customer c, orders o
+WHERE c.city <> s.city
+and o.customer_id = c.customer_id
+and o.salesman_id = s.salesman_id
+
+//4
+SELECT o.ord_no, c.cust_name
+FROM orders o, customer c
+WHERE o.customer_id = c.customer_id
+
+//5
+SELECT c.cust_name as "Customer", c.grade as "Grade"
+FROM orders o, salesman s, customer c
+WHERE o.customer_id = c.customer_id
+and o.salesman_id = s.salesman_id
+and s.city IS NOT NULL
+and c.grade IS NOT NULL
+
+//6
+SELECT c.cust_name as "Customer", c.city as "City", s.name as "Salesman", s.commission
+FROM customer c, salesman s
+WHERE c.salesman_id = s.salesman_id
+and s.commission BETWEEN 0.12 and 0.14
+
+//7
+SELECT o.ord_no, c.cust_name, s.commission AS "Commission (%)", o.purch_amt * commission AS "Commission"
+FROM salesman s, orders o, customer c
+WHERE o.customer_id = c.customer_id
+and o.salesman_id = s.salesman_id
+and c.grade >= 200
+
+//8
+SELECT *
+FROM customer c, orders o
+WHERE c.customer_id = o.customer_id 
+and o.ord_date = '2012-10-05'
