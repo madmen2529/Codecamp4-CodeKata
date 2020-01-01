@@ -1,9 +1,70 @@
 /* Override bootstrap css */
 
+:root {
+    --btn-default-bg-color: #c2d4d7;
+    --btn-default-text-color: black;
+}
+
 .container {
-    margin-top: 0;
+    /* margin-top: 0; */
+    margin: 0 auto;
+    padding: 0;
+    background-color: var(--container-bg-color);
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+.row {
+    margin: 1rem 0;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+    padding: 0;
 }
 
 .card {
     width: 18rem;
+    border: none;
+}
+
+.card-img-top {
+    border-radius: 0%;
+}
+
+.card-body {
+    padding: 1rem 0;
+}
+
+.card-body>p {
+    margin: 1rem 0;
+}
+
+.btn {
+    border: none;
+    border-radius: 0;
+}
+
+.btn-secondary {
+    background-color: var(--btn-default-bg-color);
+    color: var(--btn-default-text-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--btn-default-text-color);
+    color: var(--btn-default-bg-color);
 }
