@@ -1,0 +1,764 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project2</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/c7c4906b23.js" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- https://www.newsweek.com/ -->
+
+    <!-- Position: absolute -->
+    <!-- <nav>
+        {Newsweek Logo}
+        <ui>
+            <li> SIGN IN </li>
+            <li>
+                <Button type="button"> SUBCRIBE > </Button>
+            </li>
+            <i class="fas fa-stream"></i>
+        </ui>
+    </nav> -->
+
+    <div class="container">
+        <header id="header">
+            <div class="row">
+                <div class="col-4">
+                    <p>{Date: Wed, Dec 18, 2019}</p>
+                </div>
+                <div class="col-4 text-center">
+                    <h1 class="display-2">Newsweek</h1>
+                </div>
+                <div class="col-4 text-right">
+                    <p> SIGN IN <a href="#"> SUBCRIBE <i class="fas fa-chevron-right"></i> </a></p>
+                </div>
+            </div>
+        </header>
+
+        <nav id="newstype-nav" class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-link"><a class="nav-link border-right" href="#">U.S.</a></li>
+                    <li class="nav-link"><a class="nav-link border-right" href="#">World</a></li>
+                    <li class="nav-link"><a class="nav-link border-right" href="#">Business</a></li>
+                    <li class="nav-link"><a class="nav-link border-right" href="#">Tech & Science</a></li>
+                    <li class="nav-link"><a class="nav-link border-right" href="#">Culture</a></li>
+                    <li class="nav-link"><a class="nav-link border-right" href="#">Newsgeek</a></li>
+                    <li class="nav-link"><a class="nav-link border-right" href="#">Sports</a></li>
+                    <li class="nav-link"><a class="nav-link border-right" href="#">Health</a></li>
+                    <li class="nav-link"><a class="nav-link border-right" href="#">Opinion</a></li>
+                    <li class="nav-link"><a class="nav-link" href="#">Vantage</a></li>
+                </ul>
+                <form class="form-inline">
+                    <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-default my-2 my-sm-0" type="submit">Search</button> -->
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="fas fa-search"></i></span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </nav>
+
+        <section id="news-content">
+
+            <div class="row">
+                <div class="col-3 pl-4">
+                    <section id="feature-stories-col">
+
+                        <p class="text-muted">FEATURED STORIES</p>
+
+                        <div class="row">
+                            <div class="card">
+                                <div class="img-container">
+                                    <img class="card-img-top" src="https://picsum.photos/300/200" alt="Card image cap">
+                                    <span>{News Type}</span>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title"><a href="#">Card title</a></h5>
+                                    <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="card">
+                                <div class="img-container">
+                                    <img class="card-img-top" src="https://picsum.photos/300/200" alt="Card image cap">
+                                    <span>{News Type}</span>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title"><a href="#">Card title</a></h5>
+                                    <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="card">
+                                <div class="img-container">
+                                    <img class="card-img-top" src="https://picsum.photos/300/200" alt="Card image cap">
+                                    <span>{News Type}</span>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title"><a href="#">Card title</a></h5>
+                                    <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="card">
+                                <div class="img-container">
+                                    <img class="card-img-top" src="https://picsum.photos/300/200" alt="Card image cap">
+                                    <span>{News Type}</span>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title"><a href="#">Card title</a></h5>
+                                    <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+                </div>
+                <div class="col-5 pl-2">
+                    <section id="top-story-col">
+
+                        <p class="text-muted">TOP STORY</p>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="img-container">
+                                    <img class="card-img-top" src="https://picsum.photos/300/200" alt="Card image cap">
+                                    <span>{News Type}</span>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title"><a href="#">Card title</a></h5>
+                                    <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <section id="culture-travel-col">
+
+                        <p class="text-muted">CULTURE & TRAVEL</p>
+
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="img-container">
+                                    <img class="card-img-top" src="https://picsum.photos/300/200" alt="Card image cap">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title"><a href="#">Card title</a></h5>
+                                    <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <!-- Onmouseover change bgcolor to black-->
+                                    <a href="#" class="btn btn-secondary btn-sm">Go somewhere</a>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="img-container">
+                                    <img class="card-img-top" src="https://picsum.photos/300/200" alt="Card image cap">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title"><a href="#">Card title</a></h5>
+                                    <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <!-- Onmouseover change bgcolor to black-->
+                                    <a href="#" class="btn btn-secondary btn-sm">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="img-container">
+                                    <img class="card-img-top" src="https://picsum.photos/300/200" alt="Card image cap">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title"><a href="#">Card title</a></h5>
+                                    <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <!-- Onmouseover change bgcolor to black-->
+                                    <a href="#" class="btn btn-secondary btn-sm">Go somewhere</a>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="img-container">
+                                    <img class="card-img-top" src="https://picsum.photos/300/200" alt="Card image cap">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title"><a href="#">Card title</a></h5>
+                                    <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <!-- Onmouseover change bgcolor to black-->
+                                    <a href="#" class="btn btn-secondary btn-sm">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <section id="more-stories-col">
+
+                        <p class="text-muted">MORE STORIES</p>
+                        <hr/>
+
+                        <div class="row">
+                            <div class="col-3">
+                                <img class="img-fluid" src="https://picsum.photos/300/200" alt="Card image cap">
+                            </div>
+                            <div class="col-9">
+                                <h5 class="card-title"><a href="#">Card title</a></h5>
+                                <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <hr/>
+
+                        <div class="row">
+                            <div class="col-3">
+                                <img class="img-fluid" src="https://picsum.photos/300/200" alt="Card image cap">
+                            </div>
+                            <div class="col-9">
+                                <h5 class="card-title"><a href="#">Card title</a></h5>
+                                <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <hr/>
+
+                        <div class="row">
+                            <div class="col-3">
+                                <img class="img-fluid" src="https://picsum.photos/300/200" alt="Card image cap">
+                            </div>
+                            <div class="col-9">
+                                <h5 class="card-title"><a href="#">Card title</a></h5>
+                                <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <hr/>
+
+                        <div class="row">
+                            <div class="col-3">
+                                <img class="img-fluid" src="https://picsum.photos/300/200" alt="Card image cap">
+                            </div>
+                            <div class="col-9">
+                                <h5 class="card-title"><a href="#">Card title</a></h5>
+                                <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <hr/>
+
+                        <div class="row">
+                            <div class="col-3">
+                                <img class="img-fluid" src="https://picsum.photos/300/200" alt="Card image cap">
+                            </div>
+                            <div class="col-9">
+                                <h5 class="card-title"><a href="#">Card title</a></h5>
+                                <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <hr/>
+
+                        <div class="row">
+                            <div class="col-3">
+                                <img class="img-fluid" src="https://picsum.photos/300/200" alt="Card image cap">
+                            </div>
+                            <div class="col-9">
+                                <h5 class="card-title"><a href="#">Card title</a></h5>
+                                <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <hr/>
+
+                    </section>
+                </div>
+                <div class="col-4 pl-4">
+                    <section id="opinion-col">
+
+                        <p class="text-muted">OPINION</p>
+
+                        <div class="row">
+                            <div class="col-2">
+                                <img class="img-fluid" src="https://picsum.photos/70" alt="Card image cap">
+                            </div>
+                            <div class="col-10">
+                                <h6 class="card-title"><a href="#">Card title</a></h6>
+                                <p class="card-text text-muted">By John E. Doe</p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-2">
+                                <img class="img-fluid" src="https://picsum.photos/70" alt="Card image cap">
+                            </div>
+                            <div class="col-10">
+                                <h6 class="card-title"><a href="#">Card title</a></h6>
+                                <p class="card-text text-muted">By John E. Doe</p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-2">
+                                <img class="img-fluid" src="https://picsum.photos/70" alt="Card image cap">
+                            </div>
+                            <div class="col-10">
+                                <h6 class="card-title"><a href="#">Card title</a></h6>
+                                <p class="card-text text-muted">By John E. Doe</p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-2">
+                                <img class="img-fluid" src="https://picsum.photos/70" alt="Card image cap">
+                            </div>
+                            <div class="col-10">
+                                <h6 class="card-title"><a href="#">Card title</a></h6>
+                                <p class="card-text text-muted">By John E. Doe</p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-2">
+                                <img class="img-fluid" src="https://picsum.photos/70" alt="Card image cap">
+                            </div>
+                            <div class="col-10">
+                                <h6 class="card-title"><a href="#">Card title</a></h6>
+                                <p class="card-text text-muted">By John E. Doe</p>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <section id="latest-news-col">
+
+                        <p class="text-muted">LATEST NEWS</p>
+
+                        <div class="row">
+                            <div class="col-4">
+                                <img class="img-fluid" src="https://picsum.photos/130/90" alt="Card image cap">
+                            </div>
+                            <div class="col-8">
+                                <h5 class="card-title"><a href="#">Card title</a></h5>
+                            </div>
+                        </div>
+                        <hr/>
+
+                        <div class="row">
+                            <div class="col-4">
+                                <img class="img-fluid" src="https://picsum.photos/130/90" alt="Card image cap">
+                            </div>
+                            <div class="col-8">
+                                <h5 class="card-title"><a href="#">Card title</a></h5>
+                            </div>
+                        </div>
+                        <hr/>
+
+                        <div class="row">
+                            <div class="col-4">
+                                <img class="img-fluid" src="https://picsum.photos/130/90" alt="Card image cap">
+                            </div>
+                            <div class="col-8">
+                                <h5 class="card-title"><a href="#">Card title</a></h5>
+                            </div>
+                        </div>
+                        <hr/>
+
+                        <div class="row">
+                            <div class="col-4">
+                                <img class="img-fluid" src="https://picsum.photos/130/90" alt="Card image cap">
+                            </div>
+                            <div class="col-8">
+                                <h5 class="card-title"><a href="#">Card title</a></h5>
+                            </div>
+                        </div>
+                        <hr/>
+
+                        <div class="row">
+                            <div class="col-4">
+                                <img class="img-fluid" src="https://picsum.photos/130/90" alt="Card image cap">
+                            </div>
+                            <div class="col-8">
+                                <h5 class="card-title"><a href="#">Card title</a></h5>
+                            </div>
+                        </div>
+                        <hr/>
+
+                        <div class="row">
+                            <div class="col-4">
+                                <img class="img-fluid" src="https://picsum.photos/130/90" alt="Card image cap">
+                            </div>
+                            <div class="col-8">
+                                <h5 class="card-title"><a href="#">Card title</a></h5>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <section id="signup-newsletter-col">
+
+                        <div class="row">
+                            <div class="col-9">
+                                <p class="font-weight-bold"><span class="btn btn-danger font-weight-bold mr-2"> N </span> SIGN UP FOR OUR NEWSLETTER</p>
+                                <!-- Onmouseover change bgcolor to lighter gray. -->
+                                <button class="btn btn-secondary" type="button"> SIGN UP > </button>
+                                <p><a href="#"> Update your preferences »</a></p>
+                            </div>
+                        </div>
+
+                    </section>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- <section id="newsweek-conversations">NEWSWEEK CONVERSATIONS</section> -->
+
+        <section id="magazine-content">
+
+            <div class="row">
+                <div class="col-2">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="img-container mt-5">
+                                <img class="img-fluid" src="https://picsum.photos/230/300" alt="Card image cap">
+                                <span>{m/d} ISSUE</span>
+                            </div>
+
+                            <p class="text-center">SEE ALL FEATURES <i class="fas fa-chevron-right"></i></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-10">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <p class="font-weight-bold"><span class="btn btn-danger font-weight-bold mr-2"> N </span> IN THE MAGAZINE</p>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="row">
+                        <div class="col-3">
+                            <img class="img-fluid" src="https://picsum.photos/230" alt="Card image cap">
+                            <div class="btn-group btn-group-sm mt-2" role="group" aria-label="Button group ">
+                                <button class="btn btn-sm btn-danger"> COVER </button>
+                                <button class="btn btn-sm btn-outline-danger"> {Newstype} </button>
+                            </div>
+                            <p class="mt-2"><a href="#">{News Title}</a></p>
+                        </div>
+                        <div class="col-3">
+                            <img class="img-fluid" src="https://picsum.photos/230" alt="Card image cap">
+                            <div class="btn-group btn-group-sm mt-2" role="group" aria-label="Button group ">
+                                <button class="btn btn-sm btn-danger"> COVER </button>
+                                <button class="btn btn-sm btn-outline-danger"> {Newstype} </button>
+                            </div>
+                            <p class="mt-2"><a href="#">{News Title}</a></p>
+                        </div>
+                        <div class="col-3">
+                            <img class="img-fluid" src="https://picsum.photos/230" alt="Card image cap">
+                            <div class="btn-group btn-group-sm mt-2" role="group" aria-label="Button group ">
+                                <button class="btn btn-sm btn-danger"> COVER </button>
+                                <button class="btn btn-sm btn-outline-danger"> {Newstype} </button>
+                            </div>
+                            <p class="mt-2"><a href="#">{News Title}</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <img class="img-fluid" src="https://picsum.photos/230" alt="Card image cap">
+                    <div class="btn-group btn-group-sm mt-2" role="group" aria-label="Button group ">
+                        <button class="btn btn-sm btn-danger"> COVER </button>
+                        <button class="btn btn-sm btn-outline-danger"> {Newstype} </button>
+                    </div>
+                    <p class="mt-2"><a href="#">{News Title}</a></p>
+                </div>
+                <div class="col-3">
+                    <img class="img-fluid" src="https://picsum.photos/230" alt="Card image cap">
+                    <div class="btn-group btn-group-sm" role="group" aria-label="Button group ">
+                        <button class="btn btn-sm btn-danger"> COVER </button>
+                        <button class="btn btn-sm btn-outline-danger"> {Newstype} </button>
+                    </div>
+                    <p class="text-center">{News Title}</p>
+                </div>
+                <div class="col-3">
+                    <img class="img-fluid" src="https://picsum.photos/230" alt="Card image cap">
+                    <div class="btn-group btn-group-sm" role="group" aria-label="Button group ">
+                        <button class="btn btn-sm btn-danger"> COVER </button>
+                        <button class="btn btn-sm btn-outline-danger"> {Newstype} </button>
+                    </div>
+                    <p class="text-center">{News Title}</p>
+                </div>
+                <div class="col-3">
+                    <img class="img-fluid" src="https://picsum.photos/230" alt="Card image cap">
+                    <div class="btn-group btn-group-sm" role="group" aria-label="Button group ">
+                        <button class="btn btn-sm btn-danger"> COVER </button>
+                        <button class="btn btn-sm btn-outline-danger"> {Newstype} </button>
+                    </div>
+                    <p class="text-center">{News Title}</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="editor-pick-content">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <button class="btn btn-danger"> N </button> EDITOR'S PICK
+                </div>
+            </div>
+            <hr/>
+
+            <div class="row">
+                <div class="col-3">
+                    <div class="card">
+                        <img class="card-img-top" src="https://picsum.photos/200/200" alt="Card image cap">
+                        <!-- Add type of new position:absulute at the bottom-right of image. -->
+                        <span>{News Type}</span>
+                        <div class="card-body">
+                            <!-- Onmouseover underline text. -->
+                            <h5 class="card-title"><a href="#">Card title</a></h5>
+                            <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card">
+                        <img class="card-img-top" src="https://picsum.photos/200/200" alt="Card image cap">
+                        <!-- Add type of new position:absulute at the bottom-right of image. -->
+                        <span>{News Type}</span>
+                        <div class="card-body">
+                            <!-- Onmouseover underline text. -->
+                            <h5 class="card-title"><a href="#">Card title</a></h5>
+                            <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card">
+                        <img class="card-img-top" src="https://picsum.photos/200/200" alt="Card image cap">
+                        <!-- Add type of new position:absulute at the bottom-right of image. -->
+                        <span>{News Type}</span>
+                        <div class="card-body">
+                            <!-- Onmouseover underline text. -->
+                            <h5 class="card-title"><a href="#">Card title</a></h5>
+                            <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card">
+                        <img class="card-img-top" src="https://picsum.photos/200/200" alt="Card image cap">
+                        <!-- Add type of new position:absulute at the bottom-right of image. -->
+                        <span>{News Type}</span>
+                        <div class="card-body">
+                            <!-- Onmouseover underline text. -->
+                            <h5 class="card-title"><a href="#">Card title</a></h5>
+                            <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="feature-slideshows-content">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <!-- Button with red shadow -->
+                    <button class="btn btn-danger"> N </button> FEATURED SLIDESHOWS
+                </div>
+            </div>
+            <hr/>
+
+            <div class="row">
+                <div class="col-4">
+                    <div class="card">
+                        <img class="card-img-top" src="https://picsum.photos/200/200" alt="Card image cap">
+                        <!-- Add type of new position:absulute at the bottom-right of image. -->
+                        <span>{Total slide show}</span>
+                        <div class="card-body">
+                            <!-- Onmouseover underline text. -->
+                            <h5 class="card-title"><a href="#">Card title</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <img class="card-img-top" src="https://picsum.photos/200/200" alt="Card image cap">
+                        <!-- Add type of new position:absulute at the bottom-right of image. -->
+                        <span>{Total slide show}</span>
+                        <div class="card-body">
+                            <!-- Onmouseover underline text. -->
+                            <h5 class="card-title"><a href="#">Card title</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <img class="card-img-top" src="https://picsum.photos/200/200" alt="Card image cap">
+                        <!-- Add type of new position:absulute at the bottom-right of image. -->
+                        <span>{Total slide show}</span>
+                        <div class="card-body">
+                            <!-- Onmouseover underline text. -->
+                            <h5 class="card-title"><a href="#">Card title</a></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="newstype-pick-content">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Button with red shadow -->
+                    <a href="#" class="text-danger">{Newstype}</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-8">
+                    <div class="row">
+                        <div class="col-6">
+                            <img class="card-img-top" src="https://picsum.photos/300/200" alt="Card image cap">
+                            <!-- Onmouseover underline text. -->
+                            <h5 class="card-title"><a href="#">Card title</a></h5>
+                        </div>
+                        <div class="col-6">
+                            <img class="card-img-top" src="https://picsum.photos/300/200" alt="Card image cap">
+                            <!-- Onmouseover underline text. -->
+                            <h5 class="card-title"><a href="#">Card title</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="row">
+                        <div class="col-6">
+                            <img class="img-fluid" src="https://picsum.photos/300/200" alt="Card image cap">
+                        </div>
+                        <div class="col-6">
+                            <!-- Onmouseover text color red. -->
+                            <h5 class="card-title"><a href="#">Card title</a></h5>
+                            <p class="card-text text-muted">By John E. Doe</p>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="row">
+                        <div class="col-6">
+                            <img class="img-fluid" src="https://picsum.photos/300/200" alt="Card image cap">
+                        </div>
+                        <div class="col-6">
+                            <!-- Onmouseover text color red. -->
+                            <h5 class="card-title"><a href="#">Card title</a></h5>
+                            <p class="card-text text-muted">By John E. Doe</p>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="row">
+                        <div class="col-6">
+                            <img class="img-fluid" src="https://picsum.photos/300/200" alt="Card image cap">
+                        </div>
+                        <div class="col-6">
+                            <!-- Onmouseover text color red. -->
+                            <h5 class="card-title"><a href="#">Card title</a></h5>
+                            <p class="card-text text-muted">By John E. Doe</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="subscribe-newletter-content">
+            <div class="row">
+                <div class="col-8">
+                    <p class="text-danger">SUBSCRIBE</p>
+                    <div class="row">
+                        <div class="col-5 text-right">
+                            <img class="img-fluid" src="https://picsum.photos/200/250" alt="Card image cap">
+                        </div>
+                        <div class="col-7">
+                            <h5 class="card-title"><a href="#">Card title</a></h5>
+                            <p class="card-text text-muted">Lorem ipsum</p>
+                            <button class="btn btn-danger"> SUBSCRIBE > </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <p class="text-danger">NEWSLETTER</p>
+                    <div class="row border">
+                        <div class="col-6">
+                            <img class="img-fluid" src="https://picsum.photos/200/250" alt="Card image cap">
+                        </div>
+                        <div class="col-6 text-center">
+                            <h5 class="card-title"><a href="#">Card title</a></h5>
+                            <p class="card-text text-muted">Lorem ipsum</p>
+                            <button class="btn btn-danger"> SIGN UP > </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer mt-2">
+            <div class="row">
+                <div class="col-6">
+                    <span class="display-4 text-danger"> Newsweek </span> <span class="text-muted">© 2019 NEWSWEEK</span>
+                </div>
+                <div class="col-6 text-right">
+                    <div> {Icon facebook} {Icon Twitter} {Icon Instagram} {Icon tumblr} {Icon tumblr} {Icon linkedin}</div>
+                </div>
+            </div>
+            <hr/>
+
+            <div class="row">
+                <div class="col-12">
+                    <p>
+                        <span class="font-weight-bold"> Editions: </span> <span class="text-muted">
+                            <a href="#">U.S. Edition</a> | 
+                            <a href="#">日本</a> | 
+                            <a href="#">한국</a> | 
+                            <a href="#">Pakistan</a> | 
+                            <a href="#">Polska</a> | 
+                            <a href="#">România</a>
+                        </span>
+                    </p>
+                    <p>
+                        <span class="text-muted">
+                            <a href="#">About Us</a> |
+                            <a href="#">Corrections</a> |
+                            <a href="#">Contact Us</a> |
+                            <a href="#">Editorial Guidelines</a> |
+                            <a href="#">Advertise</a> |
+                            <a href="#">Copyright</a> |
+                            <a href="#">Terms & Conditions</a> |
+                            <a href="#">Privacy Policy</a> |
+                            <a href="#">Cookie Policy</a> |
+                            <a href="#">Terms of Sale</a> |
+                            <a href="#">Archive</a> |
+                            <a href="#">Announcements</a> |
+                            <a href="#">Consent preferences</a> |
+                        </span>
+                    </p>
+
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
