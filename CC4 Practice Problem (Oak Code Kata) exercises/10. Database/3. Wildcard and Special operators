@@ -1,0 +1,105 @@
+//1
+SELECT salesman_id, name, city, commission 
+FROM salesman 
+WHERE city = 'Paris' or city = 'Rome'
+
+//2
+SELECT salesman_id, name, city, commission 
+FROM salesman 
+WHERE city IN('Paris','Rome')
+
+//3
+SELECT salesman_id, name, city, commission 
+FROM salesman 
+WHERE city NOT IN('Paris','Rome')
+
+//4
+SELECT customer_id, cust_name, city, grade, salesman_id 
+FROM customer 
+WHERE customer_id IN (3007, 3008, 3009)
+
+//5
+SELECT salesman_id, name, city, commission 
+FROM salesman 
+WHERE commission BETWEEN 0.12 and 0.14
+
+//6
+SELECT ord_no, purch_amt, ord_date, customer_id, salesman_id
+FROM orders 
+WHERE purch_amt BETWEEN 500 AND 4000
+AND purch_amt NOT IN( 948.50, 1983.43 )
+
+//7
+SELECT salesman_id, name, city, commission 
+FROM salesman
+WHERE name BETWEEN 'A' and 'L'
+
+//8
+SELECT salesman_id, name, city, commission 
+FROM salesman
+WHERE name NOT BETWEEN 'A' and 'L'
+
+//9
+SELECT customer_id, cust_name, city, grade, salesman_id 
+FROM customer
+WHERE cust_name LIKE 'B%'
+
+//10
+SELECT customer_id, cust_name, city, grade, salesman_id 
+FROM customer
+WHERE cust_name LIKE '%n'
+
+//11
+SELECT salesman_id, name, city, commission 
+FROM salesman
+WHERE name LIKE 'N__l%'
+
+//12
+SELECT col1
+FROM testtable
+WHERE col1 LIKE '%/_%' ESCAPE '/'
+
+//13
+SELECT col1
+FROM testtable
+WHERE col1 NOT LIKE '%/_%' ESCAPE '/'
+
+//14
+SELECT col1
+FROM testtable
+WHERE col1 LIKE '%//%' ESCAPE '/'
+
+//15
+SELECT col1
+FROM testtable
+WHERE col1 NOT LIKE '%//%' ESCAPE '/'
+
+//16
+SELECT col1
+FROM testtable
+WHERE col1 LIKE '%/_//%' ESCAPE '/'
+
+//17
+SELECT col1
+FROM testtable
+WHERE col1 LIKE '%/%%' ESCAPE'/'
+
+//18
+SELECT col1
+FROM testtable
+WHERE col1 NOT LIKE '%/%%' ESCAPE'/'
+
+//19
+SELECT customer_id, cust_name, city, grade, salesman_id 
+FROM customer
+WHERE grade IS NULL
+
+//20
+SELECT customer_id, cust_name, city, grade, salesman_id 
+FROM customer
+WHERE grade IS NOT NULL
+
+//21
+SELECT EMP_IDNO, EMP_FNAME, EMP_LNAME, EMP_DEPT 
+FROM emp_details
+WHERE emp_lname LIKE 'D%';

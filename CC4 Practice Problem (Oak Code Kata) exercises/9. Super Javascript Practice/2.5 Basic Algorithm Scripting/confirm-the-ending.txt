@@ -1,0 +1,8 @@
+function confirmEnding(str, target) {
+  // "Never give up and good luck will find you."
+  // -- Falcor
+  let new_str = str.slice(str.length - target.length)
+  return new_str === target;
+}
+
+confirmEnding("Bastian", "n");

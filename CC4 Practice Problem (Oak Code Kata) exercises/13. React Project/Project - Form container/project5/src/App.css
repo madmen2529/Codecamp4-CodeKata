@@ -1,0 +1,50 @@
+body {
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: 100% 1000px;
+}
+
+form {
+  background: #f3f5f7;
+  width: 300px;
+  margin: 0px auto;
+  padding: 5%;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 35px;
+}
+
+label {
+  margin-bottom: 8px;
+  color: #425163;
+}
+
+input,
+select,
+textarea {
+  border: 2px solid #e1e1e1;
+  border-radius: 6px;
+  padding: 8px 10px;
+  color: #232327;
+  &:focus {
+    outline: none;
+    border-color: #10c761;
+  }
+  &.has-error {
+    border-color: #f26969;
+  }
+}
+
+.error-message {
+  color: #f26969;
+  font-weight: bold;
+  font-size: 0.9em;
+  display: block;
+  text-align: right;
+  margin-top: 5px;
+}

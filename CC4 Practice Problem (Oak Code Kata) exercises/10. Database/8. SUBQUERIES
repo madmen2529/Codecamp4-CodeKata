@@ -1,0 +1,386 @@
+//https://www.w3resource.com/sql-exercises/subqueries/index.php
+
+//1
+SELECT *
+FROM orders
+WHERE salesman_id =
+   (
+      SELECT salesman_id 
+      FROM salesman 
+      WHERE name LIKE '%Paul Adam%'
+   );
+
+//2
+SELECT *
+FROM orders
+WHERE salesman_id =
+   (
+      SELECT salesman_id 
+      FROM salesman 
+      WHERE city LIKE '%London%'
+   );
+
+//3
+SELECT *
+FROM orders
+WHERE salesman_id =
+   (
+      SELECT DISTINCT salesman_id 
+      FROM orders 
+      WHERE customer_id = 3007
+   );
+
+//4
+SELECT *
+FROM orders
+WHERE purch_amt >
+   (
+      SELECT AVG(purch_amt) 
+      FROM orders 
+      WHERE ord_date = '10/10/2012'
+   );
+
+//5
+SELECT *
+FROM orders
+WHERE salesman_id in
+   (
+      SELECT salesman_id 
+      FROM salesman 
+      WHERE city LIKE '%New York%'
+   );
+
+//6
+SELECT commission
+FROM salesman
+WHERE salesman_id in
+   (
+      SELECT salesman_id 
+      FROM customer
+      WHERE city LIKE '%Paris%'
+   );
+
+//7
+SELECT *
+FROM customer
+WHERE customer_id =
+   (
+      SELECT salesman_id -2001
+      FROM salesman
+      WHERE name LIKE '%Mc Lyon%'
+   );
+
+//8
+SELECT grade, COUNT (*)
+FROM customer
+GROUP BY grade
+HAVING grade >
+   (
+      SELECT AVG(grade)
+      FROM customer
+      WHERE city LIKE '%New York%'
+   );
+
+//9
+SELECT ord_no, purch_amt, ord_date, salesman_id 
+FROM orders 
+WHERE salesman_id in 
+   (
+      SELECT salesman_id 
+      FROM salesman
+      WHERE commission = (
+         SELECT MAX(commission) 
+         FROM salesman
+      )
+   );
+
+//10
+SELECT o.*, c.cust_name
+FROM orders o, customer c
+WHERE c.customer_id = o.customer_id
+   AND o.ord_date = '2012-08-17';
+
+//11
+SELECT salesman_id, name 
+FROM salesman s 
+WHERE 1 < 
+   (
+      SELECT COUNT(*) 
+      FROM customer
+      WHERE salesman_id = s.salesman_id
+   );
+
+//12
+SELECT * 
+FROM orders o1
+WHERE purch_amt >
+   (
+      SELECT AVG(purch_amt) 
+      FROM orders o2 
+      WHERE o2.customer_id = o1.customer_id
+   );
+
+//13
+SELECT * 
+FROM orders o
+WHERE purch_amt >=
+   (
+      SELECT AVG(purch_amt) 
+      FROM orders o2 
+      WHERE o2.customer_id = o.customer_id
+      );
+
+//14
+SELECT ord_date, SUM (purch_amt)
+FROM orders o
+GROUP BY ord_date
+HAVING SUM (purch_amt) >
+   (
+      SELECT 1000.00 + MAX(purch_amt) 
+      FROM orders o2 
+      WHERE o.ord_date = o2.ord_date
+   );
+
+//15
+SELECT customer_id, cust_name, city
+FROM customer
+WHERE EXISTS
+   (
+      SELECT *
+      FROM customer 
+      WHERE city LIKE '%London%'
+   );
+
+//16
+SELECT * 
+FROM salesman 
+WHERE salesman_id in (
+   SELECT DISTINCT salesman_id 
+   FROM customer o 
+   WHERE EXISTS (
+      SELECT * 
+      FROM customer o2 
+      WHERE o2.salesman_id = o.salesman_id 
+      AND o2.cust_name <> o.cust_name
+   )
+);
+
+//17
+SELECT * 
+FROM salesman 
+WHERE salesman_id in (
+   SELECT DISTINCT salesman_id 
+   FROM customer o 
+   WHERE NOT EXISTS (
+      SELECT * FROM customer o2 
+      WHERE o.salesman_id = o2.salesman_id 
+      AND o.cust_name <> o2.cust_name
+   )
+);
+
+//18
+SELECT * 
+FROM salesman s 
+WHERE EXISTS     
+   (
+      SELECT * FROM customer c     
+      WHERE s.salesman_id = c.salesman_id     
+	      and 1 < (
+            SELECT COUNT (*)              
+		      FROM orders o           
+		      WHERE o.customer_id = c.customer_id
+         )
+   );
+
+//19
+SELECT *
+FROM salesman 
+WHERE city=ANY
+   (
+      SELECT city
+      FROM customer
+   );
+
+//20
+SELECT *
+FROM salesman 
+WHERE city in
+   (
+      SELECT city
+      FROM customer
+   );
+
+//21
+SELECT *
+FROM salesman s
+WHERE EXISTS
+   (
+      SELECT *
+	   FROM customer c
+	   WHERE s.name < c.cust_name
+   );
+
+//22
+SELECT *
+FROM customer
+WHERE grade > ANY
+   (
+      SELECT grade
+	   FROM customer
+	   WHERE city < 'New York'
+   );
+
+//23
+SELECT *
+FROM Orders
+WHERE purch_amt > ANY
+   (
+      SELECT purch_amt
+	   FROM orders
+	   WHERE ord_date = '2012/09/10'
+   );
+
+//24
+SELECT *
+FROM orders
+WHERE purch_amt < ANY
+   (
+      SELECT purch_amt
+	   FROM orders o, customer c
+	   WHERE o.customer_id = c.customer_id
+	      AND c.city LIKE '%London%'
+   );
+
+//25
+SELECT *
+FROM orders
+WHERE purch_amt < 
+   (
+      SELECT MAX (purch_amt)
+	   FROM orders o, customer c
+	   WHERE o.customer_id = c.customer_id
+	      and c.city LIKE '%London%'
+   );
+
+//26
+SELECT *
+FROM customer
+WHERE grade > ALL
+   (
+      SELECT grade
+	   FROM customer
+	   WHERE city LIKE '%New York%'
+   );
+
+//27
+SELECT *
+FROM customer
+WHERE grade > ALL
+   (
+      SELECT grade 
+      FROM customer 
+      WHERE city LIKE '%New York%'
+   )
+
+//28
+SELECT *
+FROM customer 
+WHERE grade <> ANY
+   (
+      SELECT grade
+	   FROM customer
+	   WHERE city LIKE '%London%'
+   );
+
+//29
+SELECT *
+FROM customer 
+WHERE grade NOT IN
+   (
+      SELECT grade
+	   FROM customer
+	   WHERE city LIKE '%Paris%'
+   );
+
+//30
+SELECT *
+FROM customer 
+WHERE NOT grade = ANY
+   (
+      SELECT grade
+	   FROM customer
+	   WHERE city LIKE '%Dallas%'
+   );
+
+//31
+SELECT AVG(pro_price) as "Average Price", c.com_name as "Company"
+FROM item_mast i, company_mast c
+WHERE i.pro_com = c.com_id
+GROUP BY c.com_name;
+
+//32
+SELECT AVG(pro_price) as "Average Price", 
+c.com_name as "Company"
+FROM item_mast i, company_mast c
+WHERE i.pro_com = c.com_id
+GROUP BY c.com_name
+HAVING AVG(pro_price) >= 350;
+
+//33
+SELECT i.pro_name as "Product Name", 
+       i.pro_price as "Price", 
+       c.com_name as "Company"
+   FROM item_mast i, company_mast c
+   WHERE i.pro_com = c.com_id
+     AND i.pro_price =
+     (
+       SELECT MAX(i2.pro_price)
+         FROM item_mast i2
+         WHERE i2.pro_com = c.com_id
+     );
+
+//34
+SELECT * 
+FROM emp_details
+WHERE emp_lname in ('Gabriel' , 'Dosio');
+
+//35
+SELECT * 
+FROM emp_details
+WHERE emp_dept in (89, 63);
+
+//36
+SELECT emp_fname, emp_lname 
+FROM emp_details
+WHERE emp_dept in
+  (
+      SELECT dpt_code 
+      FROM emp_department 
+      WHERE dpt_allotment > 50000
+   );
+
+//37
+SELECT *
+FROM emp_department
+WHERE dpt_allotment >
+(
+   SELECT AVG(dpt_allotment)
+   FROM emp_department
+);
+
+//38
+SELECT emp_fname, emp_lname 
+FROM emp_details 
+WHERE emp_dept in (
+   SELECT dpt_code
+   FROM emp_department 
+   WHERE dpt_allotment = (
+      SELECT MIN(dpt_allotment)
+      FROM emp_department 
+      WHERE dpt_allotment >
+      (
+         SELECT MIN(dpt_allotment) 
+         FROM emp_department 
+      )
+   )
+);

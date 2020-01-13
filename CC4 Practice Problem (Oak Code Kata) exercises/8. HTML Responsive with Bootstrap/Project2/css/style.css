@@ -1,0 +1,229 @@
+/* my styles css */
+
+:root {
+    --body-bg-color: #f4f5f6;
+    --container-bg-color: #ffffff;
+    --header-bg-color: #f72210;
+    --culture-travel-bg-color: #f4f5f7;
+    --signup-newsletter-bg-color: #f4f5f7;
+    --subscribe-newsletter-bg-color: #f4f5f7;
+    --text-color: #ffffff;
+    --text-color2: #f72210;
+    --bg-color: #ffffff;
+    --bg-color2: #f72210;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: var(--body-bg-color);
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: black;
+    text-decoration-color: var(--text-color2);
+}
+
+p {
+    margin: 0;
+}
+
+hr {
+    margin: 0 1rem;
+}
+
+.img-container {
+    position: relative;
+}
+
+.img-container>span {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 0 0.2rem;
+    color: var(--text-color2);
+    background-color: var(--bg-color);
+    opacity: 0.7;
+}
+
+#header {
+    height: 8rem;
+    background-color: var(--header-bg-color);
+    color: var(--text-color);
+}
+
+#header .row {
+    margin-top: 0;
+}
+
+#header .col-4:first-child,
+#header .col-4:last-child {
+    padding: 4rem 2rem 0 2rem;
+}
+
+#header .col-4:nth-child(2) {
+    padding: 0.5rem 0 0 0;
+}
+
+#header a {
+    margin: 0 0 0 1rem;
+    padding: 0 1rem;
+    text-decoration: none;
+    background-color: var(--bg-color);
+    color: var(--text-color2);
+}
+
+#newstype-nav li {
+    padding: 0;
+}
+
+#newstype-nav a {
+    padding: 0 1.1rem;
+}
+
+#newstype-nav span,
+#newstype-nav input {
+    background-color: var(--bg-color);
+    border: none;
+}
+
+#newstype-nav .form-control {
+    padding: 0;
+}
+
+#newstype-nav input {
+    width: 5rem;
+    background: no-repeat var(--bg-color);
+    background-position: left top;
+    -webkit-transition: width .3s;
+    position: absolute;
+    right: 2rem;
+}
+
+#newstype-nav input:hover {
+    width: 78rem;
+}
+
+#culture-travel-col {
+    background-color: var(--culture-travel-bg-color);
+}
+
+#culture-travel-col>p {
+    padding: 0.5rem 0.5rem;
+}
+
+#culture-travel-col .col-6:first-child {
+    padding: 0 0.5rem 0 0;
+}
+
+#culture-travel-col .col-6:last-child {
+    padding: 0 0 0 0.5rem;
+}
+
+#culture-travel-col .card-body {
+    padding: 0.5rem 0.5rem;
+}
+
+#more-stories-col .row>div:nth-child(2) {
+    padding: 0 0 0 1rem;
+}
+
+#opinion-col .row>div:nth-child(2) {
+    padding: 0.2rem 0 0 1rem;
+}
+
+#opinion-col img {
+    border-radius: 50%;
+}
+
+#opinion-col a {
+    text-decoration: none;
+}
+
+#opinion-col a:hover {
+    color: var(--text-color2);
+}
+
+#opinion-col p {
+    font-size: small;
+}
+
+#latest-news-col .row>div:nth-child(2) {
+    padding: 0 0 0 1rem;
+}
+
+#latest-news-col a {
+    text-decoration: none;
+}
+
+#latest-news-col a:hover {
+    color: var(--text-color2);
+}
+
+#signup-newsletter-col .row>div:first-child {
+    margin: 0 1rem;
+    padding: 1rem;
+    background-color: var(--signup-newsletter-bg-color);
+}
+
+#signup-newsletter-col p {
+    margin: 0.5rem 0;
+}
+
+#signup-newsletter-col a {
+    text-decoration: none;
+}
+
+#magazine-content .row>div {
+    padding: 0 1rem;
+}
+
+#magazine-content a {
+    text-decoration-color: var(--text-color2);
+}
+
+#editor-pick-content .row>div {
+    padding: 0 1rem;
+}
+
+#editor-pick-content a {
+    text-decoration-color: var(--text-color2);
+}
+
+#feature-slideshows-content .row>div {
+    padding: 0 1rem;
+}
+
+#feature-slideshows-content .btn {
+    border: solid 1px var(--text-color);
+    box-shadow: 3px 3px var(--text-color2);
+}
+
+#feature-slideshows-content a {
+    text-decoration-color: var(--text-color2);
+}
+
+#newstype-pick-content .row>div {
+    padding: 0 1rem;
+}
+
+#subscribe-newletter-content .subscribe-box {
+    padding: 0 1rem;
+}
+
+#subscribe-newletter-content .subscribe {
+    padding: 1rem;
+    background-color: var(--subscribe-newsletter-bg-color);
+}
+
+#subscribe-newletter-content .newsletter-box {
+    padding: 0 1rem;
+}
