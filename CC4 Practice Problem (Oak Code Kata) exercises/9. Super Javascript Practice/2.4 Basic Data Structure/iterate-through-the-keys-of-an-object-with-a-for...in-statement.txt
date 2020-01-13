@@ -1,0 +1,11 @@
+function countOnline(objUser) {
+  // change code below this line
+  let res = 0;
+  for (let user in objUser) {
+    if (objUser[user].online === true) {
+      res++;
+    }
+  }
+  return res;
+  // change code above this line
+}

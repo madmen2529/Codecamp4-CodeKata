@@ -1,0 +1,81 @@
+body {
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+@media only screen and (max-width: 1200px) {
+    #image {
+        max-width: 90%
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #image {
+        max-width: 80%
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #image {
+        max-width: 70%
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #image {
+        max-width: 70%
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #tribute-info {
+        min-width: 80%;
+    }
+    #image {
+        max-width: 70%
+    }
+}
+
+#main {
+    background-color: #eeeeee;
+    margin: 2em 0;
+}
+
+#title,
+#title-caption {
+    text-align: center;
+    padding: 1em 0 0 0;
+}
+
+#img-div {
+    text-align: center;
+    margin: 2em 1em;
+    background-color: white;
+}
+
+#img-caption {
+    padding: 0 0 1em 0;
+}
+
+#tribute-info {
+    margin: auto;
+    width: 30%;
+}
+
+#tribute-info>h3 {
+    text-align: center;
+    margin: 3em 0;
+}
+
+#tribute-info>ui>li {
+    margin: 2em 0;
+}
+
+#tribute-info>blockquote {
+    margin: 1em 0;
+}
+
+#tribute-link {
+    text-align: center;
+    padding: 2em 0;
+}

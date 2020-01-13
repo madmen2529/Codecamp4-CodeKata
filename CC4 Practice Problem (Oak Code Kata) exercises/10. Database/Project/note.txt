@@ -1,0 +1,6 @@
+จาก Project ก่อนหน้า Project 2 - Web ข่าว 1 หน้า ที่เราสร้างเว็บข่าวด้วย HTML + CSS
+
+คราวนี้ให้ออกแบบ Database ด้วย ER Diagra
+จากนั้นแปลง ER Diagram เป็น Database Schema
+จากนั้น นำ Database Schema ไปสร้างใน MySQL
+จากนั้น เขียน Code ด้วย NodeJS เพื่อให้ต่อกับ Database Mysql ได้
